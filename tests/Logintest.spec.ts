@@ -7,7 +7,7 @@ test ('Login Test', async ({page}) => {
     await page.locator('#Password').fill('password123');
 
     // Click the login button
-    await page.getByRole('button', {name: 'Submit'}).click();
+    await page.locator('#submit').click();
 
     // Verify successful login by checking for a logout button
     await expect(page.getByRole('button', {name: 'Logout'})).toBeVisible();
